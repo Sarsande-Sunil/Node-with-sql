@@ -1,0 +1,20 @@
+for adding new data base insert method
+
+CREATE TABLE IF NOT EXISTS employees (
+    id BIGINT UNSIGNED AUTO_INCREMENT,
+    first_name VARCHAR(255) NOT NULL,
+    lasrt_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    organization VARCHAR(255) NOT NULL,
+    designation VARCHAR(100) NOT NULL,
+    salary DECIMAL(11.2) UNSIGNED DEFAULT 0.00,
+    status TINYINT UNSIGNED DEFAULT 0,
+    is_deleted TINYINT UNSIGNED DEFAULT 0,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id))
+    ENGINE = INNODB;
+
+INSERT INTO node_sql_curd.employees (`first_name`,`lasrt_name`,`email`,`phone`,`organization`,`designation`,`salary`,`status`,`is_deleted`,`created_at`)
+VALUES('sunil','sarsande','sunilsarsande@gmail.com', '9890455827','allen','backend developer',600000.00,'1','0','2022-02-08 15:30:30')
